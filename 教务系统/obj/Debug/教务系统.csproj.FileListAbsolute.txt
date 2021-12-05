@@ -1,0 +1,11 @@
+F:\C#大作业\教务系统\教务系统\bin\Debug\教务系统.exe.config
+F:\C#大作业\教务系统\教务系统\bin\Debug\教务系统.exe
+F:\C#大作业\教务系统\教务系统\bin\Debug\教务系统.pdb
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.csproj.AssemblyReference.cache
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormLogin.resources
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormMain.resources
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.Properties.Resources.resources
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.csproj.GenerateResource.cache
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.csproj.CoreCompileInputs.cache
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.exe
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.pdb
