@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classtable.cs" />
     <Compile Include="DBHelpers.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -60,6 +61,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormstdInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormstdInformation.Designer.cs">
+      <DependentUpon>FormstdInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormLogin.resx">
@@ -67,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormstdInformation.resx">
+      <DependentUpon>FormstdInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

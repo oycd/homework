@@ -41,7 +41,7 @@ namespace 教务系统
             sql = "select id,name,pwd,role from admin where id='" + textCode.Text.Trim() + "'";
             Console.WriteLine(sql);
             DBHelper helper = new DBHelper("mysql");
-            if (helper.Connection())
+            /*if (helper.Connection())
             {
                 MessageBox.Show("已连接数据库");
 
@@ -49,7 +49,7 @@ namespace 教务系统
             else
             {
                 MessageBox.Show("未成功连接数据库");
-            }
+            }*/
             DbDataReader reader = helper.DataRead(sql);
 
             if (reader != null && reader.Read() && reader.GetString(2) == textPwd.Text)
