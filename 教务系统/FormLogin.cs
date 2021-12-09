@@ -14,6 +14,7 @@ namespace 教务系统
     {
         string userName;
         string userCode;
+
         public string UserName
         {
             get
@@ -38,9 +39,10 @@ namespace 教务系统
         {
 
             string sql;
-            sql = "select id,name,pwd,role from admin where id='" + textCode.Text.Trim() + "'";
+            sql = "select code,name,pwd,role from admin where code='" + textCode.Text.Trim() + "'";
             Console.WriteLine(sql);
             DBHelper helper = new DBHelper("mysql");
+           
             /*if (helper.Connection())
             {
                 MessageBox.Show("已连接数据库");
@@ -56,6 +58,7 @@ namespace 教务系统
             {
                 userCode = reader.GetString(0);
                 userName = reader.GetString(1);
+               
                 Close();
             }
             else
@@ -69,6 +72,7 @@ namespace 教务系统
 
         private void btnExit_Click(object sender, System.EventArgs e)
         {
+            
             Application.Exit();
         }
     }
