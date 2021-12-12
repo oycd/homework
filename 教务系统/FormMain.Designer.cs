@@ -39,14 +39,12 @@ namespace 教务系统
             this.dtGrd1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSleccla = new System.Windows.Forms.Button();
             this.btnLogout1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnTeamanage = new System.Windows.Forms.Button();
+            this.btnStdmanage = new System.Windows.Forms.Button();
             this.btnSearchsco = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnScorepb = new System.Windows.Forms.Button();
-            this.btnSelcinform = new System.Windows.Forms.Button();
             this.selfPic = new System.Windows.Forms.PictureBox();
             this.textClass = new System.Windows.Forms.TextBox();
             this.textMajor = new System.Windows.Forms.TextBox();
@@ -56,6 +54,8 @@ namespace 教务系统
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSleccla = new System.Windows.Forms.Button();
+            this.btnSelcinform = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrd1)).BeginInit();
@@ -89,7 +89,7 @@ namespace 教务系统
             this.btnLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1225, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1225, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,7 +97,7 @@ namespace 教务系统
             // 
             this.btnLogout.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(70, 25);
+            this.btnLogout.Size = new System.Drawing.Size(70, 32);
             this.btnLogout.Text = "注销";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -147,14 +147,12 @@ namespace 教务系统
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
-            this.groupBox2.Controls.Add(this.btnSleccla);
             this.groupBox2.Controls.Add(this.btnLogout1);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Controls.Add(this.btnTeamanage);
+            this.groupBox2.Controls.Add(this.btnStdmanage);
             this.groupBox2.Controls.Add(this.btnSearchsco);
             this.groupBox2.Controls.Add(this.btnExit);
             this.groupBox2.Controls.Add(this.btnScorepb);
-            this.groupBox2.Controls.Add(this.btnSelcinform);
             this.groupBox2.Controls.Add(this.selfPic);
             this.groupBox2.Controls.Add(this.textClass);
             this.groupBox2.Controls.Add(this.textMajor);
@@ -164,6 +162,8 @@ namespace 教务系统
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.btnSleccla);
+            this.groupBox2.Controls.Add(this.btnSelcinform);
             this.groupBox2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(0, 28);
             this.groupBox2.Name = "groupBox2";
@@ -171,25 +171,12 @@ namespace 教务系统
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
-            // btnSleccla
-            // 
-            this.btnSleccla.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSleccla.Image = ((System.Drawing.Image)(resources.GetObject("btnSleccla.Image")));
-            this.btnSleccla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSleccla.Location = new System.Drawing.Point(756, 97);
-            this.btnSleccla.Name = "btnSleccla";
-            this.btnSleccla.Size = new System.Drawing.Size(191, 55);
-            this.btnSleccla.TabIndex = 19;
-            this.btnSleccla.Text = "选课中心";
-            this.btnSleccla.UseVisualStyleBackColor = true;
-            this.btnSleccla.Click += new System.EventHandler(this.btnSleccla_Click);
-            // 
             // btnLogout1
             // 
             this.btnLogout1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogout1.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout1.Image")));
             this.btnLogout1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout1.Location = new System.Drawing.Point(1000, 247);
+            this.btnLogout1.Location = new System.Drawing.Point(1000, 212);
             this.btnLogout1.Name = "btnLogout1";
             this.btnLogout1.Size = new System.Drawing.Size(191, 55);
             this.btnLogout1.TabIndex = 18;
@@ -197,48 +184,50 @@ namespace 教务系统
             this.btnLogout1.UseVisualStyleBackColor = true;
             this.btnLogout1.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button7
+            // btnTeamanage
             // 
-            this.button7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1000, 174);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(191, 55);
-            this.button7.TabIndex = 17;
-            this.button7.Text = "选课中心";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnTeamanage.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTeamanage.Image = ((System.Drawing.Image)(resources.GetObject("btnTeamanage.Image")));
+            this.btnTeamanage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeamanage.Location = new System.Drawing.Point(1000, 135);
+            this.btnTeamanage.Name = "btnTeamanage";
+            this.btnTeamanage.Size = new System.Drawing.Size(191, 55);
+            this.btnTeamanage.TabIndex = 17;
+            this.btnTeamanage.Text = "老师管理";
+            this.btnTeamanage.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnStdmanage
             // 
-            this.button6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(1000, 101);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 55);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "选课中心";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnStdmanage.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStdmanage.Image = ((System.Drawing.Image)(resources.GetObject("btnStdmanage.Image")));
+            this.btnStdmanage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStdmanage.Location = new System.Drawing.Point(1000, 55);
+            this.btnStdmanage.Name = "btnStdmanage";
+            this.btnStdmanage.Size = new System.Drawing.Size(191, 55);
+            this.btnStdmanage.TabIndex = 16;
+            this.btnStdmanage.Text = "学生管理";
+            this.btnStdmanage.UseVisualStyleBackColor = true;
+            this.btnStdmanage.Click += new System.EventHandler(this.btnStdmanage_Click);
             // 
             // btnSearchsco
             // 
             this.btnSearchsco.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSearchsco.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchsco.Image")));
             this.btnSearchsco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchsco.Location = new System.Drawing.Point(1000, 28);
+            this.btnSearchsco.Location = new System.Drawing.Point(756, 135);
             this.btnSearchsco.Name = "btnSearchsco";
             this.btnSearchsco.Size = new System.Drawing.Size(191, 55);
             this.btnSearchsco.TabIndex = 15;
             this.btnSearchsco.Text = "成绩查询";
             this.btnSearchsco.UseVisualStyleBackColor = true;
+            this.btnSearchsco.Click += new System.EventHandler(this.btnSearchsco_Click);
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(756, 246);
+            this.btnExit.Location = new System.Drawing.Point(756, 212);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(191, 55);
             this.btnExit.TabIndex = 14;
@@ -251,26 +240,13 @@ namespace 教务系统
             this.btnScorepb.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnScorepb.Image = ((System.Drawing.Image)(resources.GetObject("btnScorepb.Image")));
             this.btnScorepb.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScorepb.Location = new System.Drawing.Point(756, 173);
+            this.btnScorepb.Location = new System.Drawing.Point(756, 135);
             this.btnScorepb.Name = "btnScorepb";
             this.btnScorepb.Size = new System.Drawing.Size(191, 55);
             this.btnScorepb.TabIndex = 13;
             this.btnScorepb.Text = "成绩发布";
             this.btnScorepb.UseVisualStyleBackColor = true;
             this.btnScorepb.Click += new System.EventHandler(this.btnScorepb_Click);
-            // 
-            // btnSelcinform
-            // 
-            this.btnSelcinform.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSelcinform.Image = ((System.Drawing.Image)(resources.GetObject("btnSelcinform.Image")));
-            this.btnSelcinform.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelcinform.Location = new System.Drawing.Point(756, 28);
-            this.btnSelcinform.Name = "btnSelcinform";
-            this.btnSelcinform.Size = new System.Drawing.Size(191, 55);
-            this.btnSelcinform.TabIndex = 12;
-            this.btnSelcinform.Text = "选课信息";
-            this.btnSelcinform.UseVisualStyleBackColor = true;
-            this.btnSelcinform.Click += new System.EventHandler(this.btnSelcinform_Click);
             // 
             // selfPic
             // 
@@ -366,6 +342,32 @@ namespace 教务系统
             this.label1.TabIndex = 1;
             this.label1.Text = "姓    名：";
             // 
+            // btnSleccla
+            // 
+            this.btnSleccla.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSleccla.Image = ((System.Drawing.Image)(resources.GetObject("btnSleccla.Image")));
+            this.btnSleccla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSleccla.Location = new System.Drawing.Point(756, 55);
+            this.btnSleccla.Name = "btnSleccla";
+            this.btnSleccla.Size = new System.Drawing.Size(191, 55);
+            this.btnSleccla.TabIndex = 19;
+            this.btnSleccla.Text = "选课中心";
+            this.btnSleccla.UseVisualStyleBackColor = true;
+            this.btnSleccla.Click += new System.EventHandler(this.btnSleccla_Click);
+            // 
+            // btnSelcinform
+            // 
+            this.btnSelcinform.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSelcinform.Image = ((System.Drawing.Image)(resources.GetObject("btnSelcinform.Image")));
+            this.btnSelcinform.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelcinform.Location = new System.Drawing.Point(756, 55);
+            this.btnSelcinform.Name = "btnSelcinform";
+            this.btnSelcinform.Size = new System.Drawing.Size(191, 55);
+            this.btnSelcinform.TabIndex = 12;
+            this.btnSelcinform.Text = "选课信息";
+            this.btnSelcinform.UseVisualStyleBackColor = true;
+            this.btnSelcinform.Click += new System.EventHandler(this.btnSelcinform_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -414,8 +416,8 @@ namespace 教务系统
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.PictureBox selfPic;
         private System.Windows.Forms.Button btnLogout1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnTeamanage;
+        private System.Windows.Forms.Button btnStdmanage;
         private System.Windows.Forms.Button btnSearchsco;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnScorepb;

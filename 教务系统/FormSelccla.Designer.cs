@@ -29,6 +29,9 @@ namespace 教务系统
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtGrid2 = new System.Windows.Forms.DataGridView();
             this.selcecode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,7 +66,7 @@ namespace 教务系统
             this.dtGrid2.AllowUserToDeleteRows = false;
             this.dtGrid2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtGrid2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGrid2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtGrid2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGrid2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -73,6 +76,14 @@ namespace 教务系统
             this.time,
             this.credit,
             this.alltime});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGrid2.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtGrid2.Location = new System.Drawing.Point(0, 77);
             this.dtGrid2.MultiSelect = false;
             this.dtGrid2.Name = "dtGrid2";
@@ -80,7 +91,7 @@ namespace 教务系统
             this.dtGrid2.RowHeadersWidth = 62;
             this.dtGrid2.RowTemplate.Height = 30;
             this.dtGrid2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGrid2.Size = new System.Drawing.Size(672, 237);
+            this.dtGrid2.Size = new System.Drawing.Size(718, 237);
             this.dtGrid2.TabIndex = 0;
             // 
             // selcecode
@@ -90,7 +101,6 @@ namespace 教务系统
             this.selcecode.MinimumWidth = 8;
             this.selcecode.Name = "selcecode";
             this.selcecode.ReadOnly = true;
-            this.selcecode.Width = 116;
             // 
             // code
             // 
@@ -99,7 +109,6 @@ namespace 教务系统
             this.code.MinimumWidth = 8;
             this.code.Name = "code";
             this.code.ReadOnly = true;
-            this.code.Width = 116;
             // 
             // teacher
             // 
@@ -108,7 +117,6 @@ namespace 教务系统
             this.teacher.MinimumWidth = 8;
             this.teacher.Name = "teacher";
             this.teacher.ReadOnly = true;
-            this.teacher.Width = 80;
             // 
             // time
             // 
@@ -117,7 +125,6 @@ namespace 教务系统
             this.time.MinimumWidth = 8;
             this.time.Name = "time";
             this.time.ReadOnly = true;
-            this.time.Width = 80;
             // 
             // credit
             // 
@@ -126,7 +133,6 @@ namespace 教务系统
             this.credit.MinimumWidth = 8;
             this.credit.Name = "credit";
             this.credit.ReadOnly = true;
-            this.credit.Width = 80;
             // 
             // alltime
             // 
@@ -135,7 +141,6 @@ namespace 教务系统
             this.alltime.MinimumWidth = 8;
             this.alltime.Name = "alltime";
             this.alltime.ReadOnly = true;
-            this.alltime.Width = 80;
             // 
             // textdeliver
             // 
@@ -157,10 +162,10 @@ namespace 教务系统
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(7, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 28);
+            this.label1.Size = new System.Drawing.Size(159, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "可选课程:";
             // 
@@ -169,7 +174,7 @@ namespace 教务系统
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.AutoSize = true;
             this.button1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(421, 383);
+            this.button1.Location = new System.Drawing.Point(429, 383);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 62);
             this.button1.TabIndex = 4;
@@ -182,7 +187,7 @@ namespace 教务系统
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnExit.AutoSize = true;
             this.btnExit.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExit.Location = new System.Drawing.Point(716, 383);
+            this.btnExit.Location = new System.Drawing.Point(724, 383);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(140, 62);
             this.btnExit.TabIndex = 5;
@@ -194,10 +199,10 @@ namespace 教务系统
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(6, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 28);
+            this.label2.Size = new System.Drawing.Size(159, 33);
             this.label2.TabIndex = 6;
             this.label2.Text = "已选课程:";
             // 
@@ -207,8 +212,16 @@ namespace 教务系统
             this.dtGrid3.AllowUserToDeleteRows = false;
             this.dtGrid3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtGrid3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtGrid3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGrid3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGrid3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtGrid3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGrid3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -216,14 +229,22 @@ namespace 教务系统
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
-            this.dtGrid3.Location = new System.Drawing.Point(6, 75);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGrid3.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtGrid3.Location = new System.Drawing.Point(0, 75);
             this.dtGrid3.MultiSelect = false;
             this.dtGrid3.Name = "dtGrid3";
             this.dtGrid3.ReadOnly = true;
             this.dtGrid3.RowHeadersWidth = 62;
             this.dtGrid3.RowTemplate.Height = 30;
             this.dtGrid3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGrid3.Size = new System.Drawing.Size(557, 234);
+            this.dtGrid3.Size = new System.Drawing.Size(586, 234);
             this.dtGrid3.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -233,7 +254,6 @@ namespace 教务系统
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 116;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -242,7 +262,6 @@ namespace 教务系统
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 80;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -251,7 +270,6 @@ namespace 教务系统
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 80;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -260,7 +278,6 @@ namespace 教务系统
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 80;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -269,16 +286,15 @@ namespace 教务系统
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 80;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox1.Controls.Add(this.dtGrid2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(1, 13);
+            this.groupBox1.Location = new System.Drawing.Point(9, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(672, 308);
+            this.groupBox1.Size = new System.Drawing.Size(718, 308);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -287,9 +303,9 @@ namespace 教务系统
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox2.Controls.Add(this.dtGrid3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(679, 12);
+            this.groupBox2.Location = new System.Drawing.Point(733, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(563, 315);
+            this.groupBox2.Size = new System.Drawing.Size(586, 315);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
@@ -306,7 +322,7 @@ namespace 教务系统
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 506);
+            this.ClientSize = new System.Drawing.Size(1323, 506);
             this.Controls.Add(this.textdeliver3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

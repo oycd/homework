@@ -362,8 +362,19 @@ namespace 教务系统
             formScorepb.textdelive5.Text = userid;
             formScorepb.Show();
         }
-        //删掉
 
+        private void btnSearchsco_Click(object sender, EventArgs e)
+        {
+            FormScoreselc formScoreselc = new FormScoreselc();
+            formScoreselc.textdelive6.Text = userid;
+            formScoreselc.Show();
 
+        }
+
+        private void btnStdmanage_Click(object sender, EventArgs e)
+        {
+            FormStdManage formStdManage = new FormStdManage();
+            formStdManage.Show();
+        }
     }
 }
