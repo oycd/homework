@@ -359,6 +359,7 @@ namespace 教务系统
         private void btnScorepb_Click(object sender, EventArgs e)
         {
             FormScorepb formScorepb = new FormScorepb();
+            formScorepb.textdelive5.Text = userid;
             formScorepb.Show();
         }
         //删掉
