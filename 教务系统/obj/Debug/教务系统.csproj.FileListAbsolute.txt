@@ -9,3 +9,6 @@ F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.csproj.GenerateR
 F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.csproj.CoreCompileInputs.cache
 F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.exe
 F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.pdb
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormSelccla.resources
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.Formselecinform.resources
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormScorepb.resources

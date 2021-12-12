@@ -60,7 +60,7 @@ namespace 教务系统
             this.textPwd.Name = "textPwd";
             this.textPwd.Size = new System.Drawing.Size(271, 28);
             this.textPwd.TabIndex = 3;
-            this.textPwd.Text = "192121";
+            this.textPwd.Text = "123456";
             this.textPwd.UseSystemPasswordChar = true;
             // 
             // label1
@@ -79,7 +79,7 @@ namespace 教务系统
             this.textCode.Name = "textCode";
             this.textCode.Size = new System.Drawing.Size(271, 31);
             this.textCode.TabIndex = 1;
-            this.textCode.Text = "5720192121";
+            this.textCode.Text = "1234567";
             // 
             // label2
             // 
@@ -127,7 +127,6 @@ namespace 教务系统
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "教务系统登录";
-            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
