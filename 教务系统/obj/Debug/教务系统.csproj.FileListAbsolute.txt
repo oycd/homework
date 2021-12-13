@@ -14,3 +14,4 @@ F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.Formselecinform.
 F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormScorepb.resources
 F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormScoreselc.resources
 F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormStdManage.resources
+F:\C#大作业\教务系统\教务系统\obj\Debug\教务系统.FormTeaManage.resources

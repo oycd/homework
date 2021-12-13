@@ -89,7 +89,7 @@ namespace 教务系统
             this.btnLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1225, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1225, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,7 +97,7 @@ namespace 教务系统
             // 
             this.btnLogout.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(70, 32);
+            this.btnLogout.Size = new System.Drawing.Size(70, 25);
             this.btnLogout.Text = "注销";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -195,6 +195,7 @@ namespace 教务系统
             this.btnTeamanage.TabIndex = 17;
             this.btnTeamanage.Text = "老师管理";
             this.btnTeamanage.UseVisualStyleBackColor = true;
+            this.btnTeamanage.Click += new System.EventHandler(this.btnTeamanage_Click);
             // 
             // btnStdmanage
             // 

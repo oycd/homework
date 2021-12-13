@@ -376,5 +376,11 @@ namespace 教务系统
             FormStdManage formStdManage = new FormStdManage();
             formStdManage.Show();
         }
+
+        private void btnTeamanage_Click(object sender, EventArgs e)
+        {
+            FormTeaManage formTeaManage = new FormTeaManage();
+            formTeaManage.Show();
+        }
     }
 }

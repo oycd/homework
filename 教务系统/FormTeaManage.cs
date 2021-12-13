@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace 教务系统
 {
-    public partial class FormStdManage : Form
+    public partial class FormTeaManage : Form
     {
         bool add = false;//表示是否点击“新增”按钮
         int idx;//记录当前修改的操作员在DataGridVIew的位置
-        
+        string key;//记录操作员原来的工号
         string sql;
         DBHelper helper;
-        public FormStdManage()
+        public FormTeaManage()
         {
             InitializeComponent();
         }
 
-        private void FormStdManage_Load(object sender, EventArgs e)
+        private void FormTeaManage_Load(object sender, EventArgs e)
         {
-            sql = "select  code,name,dpm,major,class from admin where role = '学生'";
+            sql = "select  code,name,dpm,major,class from admin where role = '老师'";
             helper = new DBHelper("mysql");
             DataTable table = helper.FillTable(sql);
             grdData.DataSource = table;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-           this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -50,6 +45,11 @@ namespace 教务系统
             textCode.Focus();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             grpEditor.Visible = false;
@@ -58,14 +58,13 @@ namespace 教务系统
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-
             bool success = false;
-            int classcode = int.Parse(textCode.Text);
-            classcode = classcode / 100;
-           
+            /*int classcode = int.Parse(textCode.Text);
+            classcode = classcode / 100;*/
+
             if (add)
             {
-                sql = "insert into admin values ('" + textCode.Text.Trim() + "','" + textName.Text.Trim() + "','" + textPwd.Text.Trim() + "','学生','pic1.png','" + textDpm.Text.Trim() + "','" + textMajor.Text.Trim() + "','" + textClass.Text.Trim() + "','" + classcode + "')";
+                sql = "insert into admin values ('" + textCode.Text.Trim() + "','" + textName.Text.Trim() + "','" + textPwd.Text.Trim() + "','老师','pic1.png','" + textDpm.Text.Trim() + "','" + textMajor.Text.Trim() + "','" + textClass.Text.Trim() + "','" +"0"+ "')";
             }
             else
             {
@@ -120,8 +119,6 @@ namespace 教务系统
             textCode.Focus();
             textName.Enabled = false;
             textName.Text = grdData.Rows[idx].Cells[1].Value.ToString();
-
-
         }
 
         private void btnDel_Click(object sender, EventArgs e)
