@@ -36,6 +36,11 @@ namespace 教务系统
             this.btnAdd = new System.Windows.Forms.Button();
             this.grpData = new System.Windows.Forms.GroupBox();
             this.grdData = new System.Windows.Forms.DataGridView();
+            this.stdcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stddpm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stdmajor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stdclass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpEditor = new System.Windows.Forms.GroupBox();
             this.textPwd = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,11 +56,8 @@ namespace 教务系统
             this.label2 = new System.Windows.Forms.Label();
             this.textCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.stdcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stddpm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stdmajor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stdclass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textdelive8 = new System.Windows.Forms.TextBox();
+            this.textdelivecode = new System.Windows.Forms.TextBox();
             this.grpCommand.SuspendLayout();
             this.grpData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
@@ -153,6 +155,46 @@ namespace 教务系统
             this.grdData.Size = new System.Drawing.Size(1178, 725);
             this.grdData.TabIndex = 0;
             this.grdData.SelectionChanged += new System.EventHandler(this.grdData_SelectionChanged);
+            // 
+            // stdcode
+            // 
+            this.stdcode.DataPropertyName = "code";
+            this.stdcode.HeaderText = "老师学号";
+            this.stdcode.MinimumWidth = 8;
+            this.stdcode.Name = "stdcode";
+            this.stdcode.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "老师姓名";
+            this.name.MinimumWidth = 8;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // stddpm
+            // 
+            this.stddpm.DataPropertyName = "dpm";
+            this.stddpm.HeaderText = "所在院校";
+            this.stddpm.MinimumWidth = 8;
+            this.stddpm.Name = "stddpm";
+            this.stddpm.ReadOnly = true;
+            // 
+            // stdmajor
+            // 
+            this.stdmajor.DataPropertyName = "major";
+            this.stdmajor.HeaderText = "所教专业";
+            this.stdmajor.MinimumWidth = 8;
+            this.stdmajor.Name = "stdmajor";
+            this.stdmajor.ReadOnly = true;
+            // 
+            // stdclass
+            // 
+            this.stdclass.DataPropertyName = "class";
+            this.stdclass.HeaderText = "所教班级";
+            this.stdclass.MinimumWidth = 8;
+            this.stdclass.Name = "stdclass";
+            this.stdclass.ReadOnly = true;
             // 
             // grpEditor
             // 
@@ -293,51 +335,29 @@ namespace 教务系统
             this.label1.TabIndex = 0;
             this.label1.Text = "编号:";
             // 
-            // stdcode
+            // textdelive8
             // 
-            this.stdcode.DataPropertyName = "code";
-            this.stdcode.HeaderText = "老师学号";
-            this.stdcode.MinimumWidth = 8;
-            this.stdcode.Name = "stdcode";
-            this.stdcode.ReadOnly = true;
+            this.textdelive8.Location = new System.Drawing.Point(2, 207);
+            this.textdelive8.Name = "textdelive8";
+            this.textdelive8.Size = new System.Drawing.Size(100, 28);
+            this.textdelive8.TabIndex = 5;
+            this.textdelive8.Visible = false;
             // 
-            // name
+            // textdelivecode
             // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "老师姓名";
-            this.name.MinimumWidth = 8;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // stddpm
-            // 
-            this.stddpm.DataPropertyName = "dpm";
-            this.stddpm.HeaderText = "所在院校";
-            this.stddpm.MinimumWidth = 8;
-            this.stddpm.Name = "stddpm";
-            this.stddpm.ReadOnly = true;
-            // 
-            // stdmajor
-            // 
-            this.stdmajor.DataPropertyName = "major";
-            this.stdmajor.HeaderText = "所教专业";
-            this.stdmajor.MinimumWidth = 8;
-            this.stdmajor.Name = "stdmajor";
-            this.stdmajor.ReadOnly = true;
-            // 
-            // stdclass
-            // 
-            this.stdclass.DataPropertyName = "class";
-            this.stdclass.HeaderText = "所教班级";
-            this.stdclass.MinimumWidth = 8;
-            this.stdclass.Name = "stdclass";
-            this.stdclass.ReadOnly = true;
+            this.textdelivecode.Location = new System.Drawing.Point(2, 161);
+            this.textdelivecode.Name = "textdelivecode";
+            this.textdelivecode.Size = new System.Drawing.Size(100, 28);
+            this.textdelivecode.TabIndex = 6;
+            this.textdelivecode.Visible = false;
             // 
             // FormTeaManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 995);
+            this.Controls.Add(this.textdelivecode);
+            this.Controls.Add(this.textdelive8);
             this.Controls.Add(this.grpEditor);
             this.Controls.Add(this.grpData);
             this.Controls.Add(this.grpCommand);
@@ -350,6 +370,7 @@ namespace 教务系统
             this.grpEditor.ResumeLayout(false);
             this.grpEditor.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -382,5 +403,7 @@ namespace 教务系统
         private System.Windows.Forms.DataGridViewTextBoxColumn stddpm;
         private System.Windows.Forms.DataGridViewTextBoxColumn stdmajor;
         private System.Windows.Forms.DataGridViewTextBoxColumn stdclass;
+        public System.Windows.Forms.TextBox textdelive8;
+        public System.Windows.Forms.TextBox textdelivecode;
     }
 }

@@ -56,6 +56,8 @@ namespace 教务系统
             this.label2 = new System.Windows.Forms.Label();
             this.textCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textdelive7 = new System.Windows.Forms.TextBox();
+            this.textdelivecode = new System.Windows.Forms.TextBox();
             this.grpCommand.SuspendLayout();
             this.grpData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdData)).BeginInit();
@@ -68,7 +70,7 @@ namespace 教务系统
             this.grpCommand.Controls.Add(this.btnDel);
             this.grpCommand.Controls.Add(this.btnEdit);
             this.grpCommand.Controls.Add(this.btnAdd);
-            this.grpCommand.Location = new System.Drawing.Point(128, 69);
+            this.grpCommand.Location = new System.Drawing.Point(122, 28);
             this.grpCommand.Name = "grpCommand";
             this.grpCommand.Size = new System.Drawing.Size(1014, 167);
             this.grpCommand.TabIndex = 1;
@@ -122,7 +124,6 @@ namespace 教务系统
             // 
             // grpData
             // 
-            this.grpData.Controls.Add(this.grpEditor);
             this.grpData.Controls.Add(this.grdData);
             this.grpData.Location = new System.Drawing.Point(18, 242);
             this.grpData.Name = "grpData";
@@ -211,7 +212,7 @@ namespace 教务系统
             this.grpEditor.Controls.Add(this.label2);
             this.grpEditor.Controls.Add(this.textCode);
             this.grpEditor.Controls.Add(this.label1);
-            this.grpEditor.Location = new System.Drawing.Point(323, 0);
+            this.grpEditor.Location = new System.Drawing.Point(342, 217);
             this.grpEditor.Name = "grpEditor";
             this.grpEditor.Size = new System.Drawing.Size(574, 493);
             this.grpEditor.TabIndex = 3;
@@ -222,6 +223,7 @@ namespace 教务系统
             // 
             this.textPwd.Location = new System.Drawing.Point(183, 322);
             this.textPwd.Name = "textPwd";
+            this.textPwd.PasswordChar = '*';
             this.textPwd.Size = new System.Drawing.Size(263, 28);
             this.textPwd.TabIndex = 13;
             // 
@@ -334,11 +336,30 @@ namespace 教务系统
             this.label1.TabIndex = 0;
             this.label1.Text = "学号:";
             // 
+            // textdelive7
+            // 
+            this.textdelive7.Location = new System.Drawing.Point(0, 157);
+            this.textdelive7.Name = "textdelive7";
+            this.textdelive7.Size = new System.Drawing.Size(100, 28);
+            this.textdelive7.TabIndex = 4;
+            this.textdelive7.Visible = false;
+            // 
+            // textdelivecode
+            // 
+            this.textdelivecode.Location = new System.Drawing.Point(0, 112);
+            this.textdelivecode.Name = "textdelivecode";
+            this.textdelivecode.Size = new System.Drawing.Size(100, 28);
+            this.textdelivecode.TabIndex = 7;
+            this.textdelivecode.Visible = false;
+            // 
             // FormStdManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 995);
+            this.Controls.Add(this.textdelivecode);
+            this.Controls.Add(this.textdelive7);
+            this.Controls.Add(this.grpEditor);
             this.Controls.Add(this.grpData);
             this.Controls.Add(this.grpCommand);
             this.Name = "FormStdManage";
@@ -351,6 +372,7 @@ namespace 教务系统
             this.grpEditor.ResumeLayout(false);
             this.grpEditor.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -383,5 +405,7 @@ namespace 教务系统
         private System.Windows.Forms.DataGridViewTextBoxColumn stddpm;
         private System.Windows.Forms.DataGridViewTextBoxColumn stdmajor;
         private System.Windows.Forms.DataGridViewTextBoxColumn stdclass;
+        public System.Windows.Forms.TextBox textdelive7;
+        public System.Windows.Forms.TextBox textdelivecode;
     }
 }
