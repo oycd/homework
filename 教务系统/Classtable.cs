@@ -9,8 +9,7 @@ namespace 教务系统
 {
     class Classtable
     {
-        int num, week; // 周数节数，第二步的时候用得到。
-        string sum;
+      
         DataTable dt = new DataTable("subject");
         public  DataTable BuildTable()
         {

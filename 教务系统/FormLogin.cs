@@ -10,8 +10,10 @@ using System.Windows.Forms;
 using System.Data.Common;
 namespace 教务系统
 {
+    
     public partial class FormLogin : Form
     {
+        bool success;
         string userName;
         string userCode;
 
@@ -20,6 +22,13 @@ namespace 教务系统
             get
             {
                 return userName;
+            }
+        }
+        public bool Success
+        {
+            get
+            {
+                return success;
             }
         }
         public string UserCode
@@ -58,7 +67,7 @@ namespace 教务系统
             {
                 userCode = reader.GetString(0);
                 userName = reader.GetString(1);
-               
+                success = true;
                 Close();
             }
             else
@@ -72,8 +81,9 @@ namespace 教务系统
 
         private void btnExit_Click(object sender, System.EventArgs e)
         {
+            this.Close();
+            success = false;
             
-            Application.Exit();
         }
     }
 }

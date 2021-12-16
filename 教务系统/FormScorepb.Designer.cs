@@ -114,6 +114,7 @@ namespace 教务系统
             // 
             // textScore
             // 
+            this.textScore.Enabled = false;
             this.textScore.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textScore.Location = new System.Drawing.Point(465, 376);
             this.textScore.Name = "textScore";

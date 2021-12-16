@@ -140,8 +140,8 @@ namespace 教务系统
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textPwd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSure;
-        private System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.Button btnSure;
+        public System.Windows.Forms.Button btnExit;
     }
 }
 

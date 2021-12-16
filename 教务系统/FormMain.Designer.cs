@@ -95,6 +95,7 @@ namespace 教务系统
             // 
             // btnLogout
             // 
+            this.btnLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnLogout.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(70, 25);

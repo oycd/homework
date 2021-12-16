@@ -52,16 +52,17 @@ namespace 教务系统
                  textName.Text = reader.GetString(0);
                  textClass.Text= reader.GetString(1);
                 textSubject.Text = reader.GetString(2);
-
+                textScore.Enabled = true;
             }
             else
             {
                 MessageBox.Show("查无此人");
                 textCode.Text = "";
                 textCode.Focus();
+                textScore.Enabled = false;
             }
             reader.Close();
-            textScore.Enabled = true;
+            
 
         }
 

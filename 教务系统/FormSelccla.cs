@@ -38,12 +38,12 @@ namespace 教务系统
         {
            
 
-            sql = "select subcode,subname,teachname,subtime,credit,alltime from seleclass where clacode = '" + textdeliver.Text + "'";
+            sql = "select subcode,subname,teachname,subtime,credit,alltime from seleclass where stdcode = '" + textdeliver2.Text + "'";
             helper = new DBHelper("mysql");
             DataTable table = helper.FillTable(sql);
             //取得老师的号码和学生班级名字
 
-            string sql2 = "select techcode,claname from seleclass where clacode = '" + textdeliver.Text + "'";
+            string sql2 = "select techcode,claname from seleclass where stdcode = '" + textdeliver2.Text + "'";
               reader= helper.DataRead(sql2);
             if (reader != null && reader.Read() )
             {
@@ -106,7 +106,7 @@ namespace 教务系统
 
                     sql = "delete from seleclass where subcode = '" + selecsubCode + "'";
                     idx = dtGrid2.CurrentRow.Index;//得到当前行的索引值
-                    MessageBox.Show("" + dtGrid2.Rows[idx].Cells[0].Value);
+                    //MessageBox.Show("" + dtGrid2.Rows[idx].Cells[0].Value);
                     //增加到已选课右边
                     string sql1 = "insert into stdclass  values ('" + textdeliver2.Text + "','" + textdeliver.Text + "','" + dtGrid2.Rows[idx].Cells[1].Value + "','" + dtGrid2.Rows[idx].Cells[2].Value + "','" + dtGrid2.Rows[idx].Cells[3].Value + "','" + dtGrid2.Rows[idx].Cells[4].Value + "','" + dtGrid2.Rows[idx].Cells[5].Value + "','" + techcode + "','" + claname + "','" + textdeliver3.Text + "')";
 
