@@ -82,7 +82,7 @@ namespace 教务系统
                 else
                 {
                     //进行判断是否成绩已存在
-                    sql = "select stdname,claname,subname from stdscore where stdcode = '" + textCode.Text + "'";
+                    sql = "select stdname,claname,subname from stdscore where stdcode = '" + textCode.Text + "'" + " and techcode = '" + textdelive5.Text + "'";
 
                     reader = helper.DataRead(sql);
                     if (reader != null && reader.Read())
@@ -100,7 +100,7 @@ namespace 教务系统
 
                         if (MessageBox.Show("是否发布成绩？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                         {
-                            sql = "insert into stdscore  values ('" + textCode.Text + "','" + textName.Text + "','" + textClass.Text + "','" + textScore.Text + "','" + textSubject.Text + "')";
+                            sql = "insert into stdscore  values ('" + textCode.Text + "','" + textName.Text + "','" + textClass.Text + "','" + textScore.Text + "','" + textSubject.Text + "','" + textdelive5.Text + "')";
                             helper = new DBHelper("mysql");
                             if (helper.Update(sql) > 0)
                             {
