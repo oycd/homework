@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -15,8 +16,9 @@ namespace 教务系统
     {
         bool add = false;//表示是否点击“新增”按钮
         int idx;//记录当前修改的操作员在DataGridVIew的位置
-        
+        DbDataReader reader;
         string sql;
+        string code;
         DBHelper helper;
         public FormStdManage()
         {
@@ -30,7 +32,13 @@ namespace 教务系统
                 btnAdd.Enabled = false;
                 btnDel.Enabled = false;
                 sql = "select  code,name,dpm,major,class from admin where code = '"+textdelivecode.Text+"'";
+               
                 helper = new DBHelper("mysql");
+                if (reader != null && reader.Read())
+                {
+                    code = reader.GetString(0);
+                }
+                
                 DataTable table = helper.FillTable(sql);
                 grdData.DataSource = table;
             }
@@ -75,85 +83,88 @@ namespace 教务系统
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (textdelive7.Text.Equals("学生"))
-            {
-                bool success = false;
-                sql = "update admin set pwd='" + textPwd.Text + "' where code='" + grdData.Rows[idx].Cells[0].Value.ToString() + "'";
-                if (helper.Update(sql) > 0)
+            
+            
+                if (textdelive7.Text.Equals("学生"))
                 {
-                    success = true;
-                }
-                else
-                {
-                    success = false;
-                }
-                if (success)
-                {
-                    
-                       /* grdData.Rows[idx].Cells[0].Value = textCode.Text.Trim();
-                        grdData.Rows[idx].Cells[2].Value = textDpm.Text.Trim();
-                        grdData.Rows[idx].Cells[3].Value = textMajor.Text.Trim();
-                        grdData.Rows[idx].Cells[4].Value = textClass.Text.Trim();*/
-
-                  
-                    grpEditor.Visible = false;
-                    grpData.Visible = true;
-                    MessageBox.Show("密码修改成功，请重启程序登录！");
-                    Application.Exit();
-                }
-                else
-                {
-                    MessageBox.Show("密码修改失败");
-                }
-            }
-            else 
-            {
-
                     bool success = false;
-                int classcode = int.Parse(textCode.Text);
-                classcode = classcode / 100;
-           
-                if (add)
-                {
-                    sql = "insert into admin values ('" + textCode.Text.Trim() + "','" + textName.Text.Trim() + "','" + textPwd.Text.Trim() + "','学生','pic1.png','" + textDpm.Text.Trim() + "','" + textMajor.Text.Trim() + "','" + textClass.Text.Trim() + "','" + classcode + "')";
-                }
-                else
-                {
-                    sql = "update admin set code='" + textCode.Text + "',name='" + textName.Text + "',pwd='" + textPwd.Text + "',dpm='" + textDpm.Text + "',major='" + textMajor.Text + "',class='" + textClass.Text + "' where code='" + grdData.Rows[idx].Cells[0].Value.ToString() + "'";
-                }
-                if (helper.Update(sql) > 0)
-                {
-                    success = true;
-                }
-                else
-                {
-                    success = false;
-                }
-                if (success)
-                {
-                    if (add)
+                    sql = "update admin set pwd='" + textPwd.Text + "' where code='" + grdData.Rows[idx].Cells[0].Value.ToString() + "'";
+                    if (helper.Update(sql) > 0)
                     {
-                        //grdData.Rows.Add(txtCode.Text.Trim(), txtName.Text.Trim(), role);
-                        DataTable dt = (DataTable)grdData.DataSource;
-                        dt.Rows.Add(textCode.Text.Trim(), textName.Text.Trim(), textDpm.Text.Trim(), textMajor.Text.Trim(), textClass.Text.Trim());
+                        success = true;
                     }
                     else
                     {
-                        grdData.Rows[idx].Cells[0].Value = textCode.Text.Trim();
-                        grdData.Rows[idx].Cells[2].Value = textDpm.Text.Trim();
-                        grdData.Rows[idx].Cells[3].Value = textMajor.Text.Trim();
-                        grdData.Rows[idx].Cells[4].Value = textClass.Text.Trim();
-
+                        success = false;
                     }
-                    grpEditor.Visible = false;
-                    grpData.Visible = true;
-                    MessageBox.Show("数据保存成功！");
+                    if (success)
+                    {
+
+                        /* grdData.Rows[idx].Cells[0].Value = textCode.Text.Trim();
+                         grdData.Rows[idx].Cells[2].Value = textDpm.Text.Trim();
+                         grdData.Rows[idx].Cells[3].Value = textMajor.Text.Trim();
+                         grdData.Rows[idx].Cells[4].Value = textClass.Text.Trim();*/
+
+
+                        grpEditor.Visible = false;
+                        grpData.Visible = true;
+                        MessageBox.Show("密码修改成功，请重启程序登录！");
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        MessageBox.Show("密码修改失败");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("数据保存失败，可能编号重复！");
+
+                    bool success = false;
+                    long classcode = long.Parse(textCode.Text);
+                    classcode = classcode / 100;
+
+                    if (add)
+                    {
+                        sql = "insert into admin values ('" + textCode.Text.Trim() + "','" + textName.Text.Trim() + "','" + textPwd.Text.Trim() + "','学生','pic1.png','" + textDpm.Text.Trim() + "','" + textMajor.Text.Trim() + "','" + textClass.Text.Trim() + "','" + classcode + "')";
+                    }
+                    else
+                    {
+                        sql = "update admin set code='" + textCode.Text + "',name='" + textName.Text + "',pwd='" + textPwd.Text + "',dpm='" + textDpm.Text + "',major='" + textMajor.Text + "',class='" + textClass.Text + "' where code='" + grdData.Rows[idx].Cells[0].Value.ToString() + "'";
+                    }
+                    if (helper.Update(sql) > 0)
+                    {
+                        success = true;
+                    }
+                    else
+                    {
+                        success = false;
+                    }
+                    if (success)
+                    {
+                        if (add)
+                        {
+                            //grdData.Rows.Add(txtCode.Text.Trim(), txtName.Text.Trim(), role);
+                            DataTable dt = (DataTable)grdData.DataSource;
+                            dt.Rows.Add(textCode.Text.Trim(), textName.Text.Trim(), textDpm.Text.Trim(), textMajor.Text.Trim(), textClass.Text.Trim());
+                        }
+                        else
+                        {
+                            grdData.Rows[idx].Cells[0].Value = textCode.Text.Trim();
+                            grdData.Rows[idx].Cells[2].Value = textDpm.Text.Trim();
+                            grdData.Rows[idx].Cells[3].Value = textMajor.Text.Trim();
+                            grdData.Rows[idx].Cells[4].Value = textClass.Text.Trim();
+
+                        }
+                        grpEditor.Visible = false;
+                        grpData.Visible = true;
+                        MessageBox.Show("数据保存成功！");
+                    }
+                    else
+                    {
+                        MessageBox.Show("数据保存失败，可能编号重复！");
+                    }
                 }
-            }
+            
         }
 
         private void grdData_SelectionChanged(object sender, EventArgs e)
